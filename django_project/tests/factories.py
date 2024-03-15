@@ -8,7 +8,8 @@ class CategoryFactory(factory.django.DjangoModelFactory):
   class Meta:
     model = Category
 
-  name = "test_category"
+  #name = "test_category"
+  name = factory.Sequence(lambda n: f"category_{n}")
 
 
 class BrandFactory(factory.django.DjangoModelFactory):
@@ -16,7 +17,8 @@ class BrandFactory(factory.django.DjangoModelFactory):
   class Meta:
     model = Brand
 
-  name = "test_brand"
+  #name = "test_brand"
+  name = factory.Sequence(lambda n: f"brand_{n}")
 
 
 class ProductFactory(factory.django.DjangoModelFactory):
